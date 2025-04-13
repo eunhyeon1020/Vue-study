@@ -18,9 +18,12 @@ export default {
 
   methods : {
     addTodo : function() {
-    //로컬 스토리지에 저장
-    localStorage.setItem(this.newTodoItem, this.newTodoItem);
-    this.clearInput();
+      if(this.newTodoItem !== ''){
+        //로컬 스토리지에 저장
+        var obj = {completed : false, item: this.newTodoItem};
+        localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
+        this.clearInput();
+      }
     }, 
     clearInput : function () {
       //input 박스 초기화화
@@ -39,6 +42,7 @@ export default {
   .inputBox {
     display: inline-block;
     background: white;
+    width: 100%;
     height: 50px;
     line-height: 50px;
     border-radius: 5px;
