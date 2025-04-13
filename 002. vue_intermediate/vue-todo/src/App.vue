@@ -13,12 +13,13 @@ import TodoInput from './components/TodoInput.vue'
 import TodoList from './components/TodoList.vue'
 import TodoFooter from './components/TodoFooter.vue'
 
+
 export default {
   components : {
     'TodoHeader' : TodoHeader,
     'TodoInput' : TodoInput,
     'TodoList' : TodoList,
-    'TodoFooter' : TodoFooter,
+    'TodoFooter' : TodoFooter
   }
 }
 </script>
@@ -37,8 +38,8 @@ export default {
   button {
     border-style: groove;
   }
-
+  
   .shadow {
-    box-shadow: 5px 10px 10px rgb(0, 0, 0, 0.03);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
   }
 </style>
