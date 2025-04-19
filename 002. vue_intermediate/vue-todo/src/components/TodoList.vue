@@ -17,7 +17,7 @@
 export default {
   data: function() {
     return {
-      todoItems : []
+      todoItems : [] // 객체 {completed: false, item: "aa"}
     }
   },
   
